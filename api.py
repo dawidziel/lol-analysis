@@ -1,3 +1,4 @@
+
 import requests
 import json
 def taking_summoner_id(API_KEY,summoner_name, server):
