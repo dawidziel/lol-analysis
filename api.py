@@ -1,3 +1,4 @@
+#start
 def main():
     print('nic')
 if __name__ == "__main__":
