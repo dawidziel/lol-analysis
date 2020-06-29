@@ -1,17 +1,18 @@
-from kod.classes.SummonerController import SummonerController
-
+from classes.SummonerController import SummonerController
+from classes.CurrentPlayers import CurrentPlayers
+from classes.StatsController import StatsController
 
 def main():
     try:
-        server = input("Podaj nazwę serwera (np. eun1, euw1)")
-        summoner_name = input("Podaj nazwę summonera")
-        summoner = SummonerController(server, summoner_name)
-        response_2 = summoner.taking_ladder_info()
-        print(response_2['tier'])
-        print(response_2['rank'])
-        print(str(response_2['leaguePoints']) + " LP")
+        server = input("Podaj nazwę serwera (np. eun1, euw1): ")
+        match_id = input("Podaj matchid: ")
+        stats = StatsController(SummonerController.API_KEY,server, match_id)
+        print(stats.match_stats)
+        
+
     except:
-        print("jo dupia pojebało sie")
+        print("error")
+
 
 
 if __name__ == "__main__":
