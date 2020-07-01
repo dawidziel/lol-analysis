@@ -1,2 +1,5 @@
+.gitignore
 Keys.py
 classes/__init__.py
+__pycache__
+classes/__pycache__
