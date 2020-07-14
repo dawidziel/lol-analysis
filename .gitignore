@@ -3,3 +3,5 @@ Keys.py
 classes/__init__.py
 __pycache__
 classes/__pycache__
+lol_stats.db
+classes/CurrentPlayers.py

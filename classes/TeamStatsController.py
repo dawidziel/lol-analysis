@@ -48,7 +48,11 @@ class TeamStatsController:
 #below function takes overall team stats
     def taking_team_stats(self):
         team_stats = [x for x in self.match['teams'] if x['teamId'] == self.your_team_id]
-        return team_stats
+        return team_stats[0]
+        
+    def taking_enemy_team_stats(self):
+        enemy_team_stats = [x for x in self.match['teams'] if x['teamId'] == self.enemy_team_id]
+        return enemy_team_stats[0]
 
 #function takes individual stats
 #    def taking_player_stats(self):
